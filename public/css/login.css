@@ -1,0 +1,352 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #26942c;
+    overflow: hidden; /* Remove a barra de rolagem */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+
+}
+
+@font-face {
+
+    font-family: 'iconicFill';
+    src: url('iconic_fill.woff') format(woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue; /* COR DE FUNDO DO HEADER  ---> ALTERAR DEPOIS */
+    padding: 10px;
+    box-shadow: 0 4px 1px gray;
+    margin: 3px;
+}
+
+header button {
+    margin-right: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #008000
+}
+
+.cifrao {
+    width: 150px; /* Define a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+/* Efeito ao passar o mouse */
+.cifrao:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+/* Efeito ao clicar */
+.cifrao:active {
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+}
+
+/*Botões do topo da página abaixo:  ---------------------------------------*/ 
+
+.login-button {
+    top: 20px;
+    left: 20px;
+    background-color: #4CAF50;
+    margin-right: auto;
+    background-image: linear-gradient(to bottom, #2ad130, #0b6e10);         /* NÂO APAGAR */
+    border: 1px solid #AAA;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+.conta-button {
+    top: 20px;
+    left: 20px;
+    margin-right: auto;
+    background-color: #4CAF50;
+    background-image: linear-gradient(to bottom, #2ad130, #0b6e10);
+    border: 1px solid #AAA;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+.aboutus-button {
+    top: 30px;
+    left: 30px;
+    margin-right: auto;
+    background-color: #4CAF50;
+    background-image: linear-gradient(to bottom, #2ad130, #0b6e10);
+    border: 1px solid #AAA;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+.contato-button {
+    top: 40px;
+    left: 40px;
+    margin-right: auto;
+    background-color: #4CAF50;
+    background-image: linear-gradient(to bottom, #2ad130, #0b6e10);
+    border: 1px solid #AAA;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+  /* SELECAO / CLIQUE nos botoes V */
+.contato-button:hover {
+
+    background-color: #30a513;
+    background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+    border-color: #204569;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    inset: 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+    color: #FFF;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+.contato-button:active {
+
+    background-color: #09772a;
+    background-image: none;
+    border-color: #1A3754;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+}
+
+.aboutus-button:hover {
+
+    background-color: #30a513;
+    background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+    border-color: #204569;
+    box-shadow: 
+        inset 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+    color: #FFF;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+.aboutus-button:active {
+
+    background-color: 09772a;
+    background-image: none;
+    border-color: #1A3754;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);    
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+}
+
+.conta-button:hover {
+
+    background-color: #30a513;
+    background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+    border-color: #204569;
+    box-shadow: 
+        inset 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+    color: #FFF;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+.conta-button:active {
+
+    background-color: #09772a;
+    background-image: none;
+    border-color: #1A3754;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+}
+
+.login-button:hover {
+
+    background-color: 09772a;
+    background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+    border-color: #204569;                                              /* NÂO APAGAR */
+    box-shadow: 
+        inset 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+    color: #FFF;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+.login-button:active {
+
+    background-color: #09772a;
+    background-image: none;                                                /* NÂO APAGAR */
+    border-color: #1A3754;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+}
+
+/* Botões do topo da página acima -----------------------------------------*/ 
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 73vh;
+    padding: 10px;
+}
+
+.content-box {
+    color: white;
+    text-align: center;
+    width: 33%;
+}
+
+.content-box h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.content-box h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.content-box blockquote {
+    font-style: italic;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.login-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 33%;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #26942c;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-box label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-box button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #45a049;
+}
+
+.login-box a {
+    color: #26942c;
+    text-decoration: none;
+}
+
+.image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+h1, h2 {
+
+    font-size: 4rem; /* Tamanho grande */
+    color: #FFFFFF; /* Cor branca para contraste */
+    font-weight: bold; /* Negrito */
+    margin: 20px 0; /* Espaçamento em torno do título */
+    text-align: center; /* Centraliza o título */
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7); /* Sombra para destacar */
+    padding: 40px;
+}
+
+.mensagem-topo {
+    width: 100%; /* Ocupa toda a largura da tela */
+    text-align: center; /* Centraliza o texto */
+    background-color: #45a049;  
+    padding: -5; /* Espaçamento vertical */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #ffffff; /* Cor do texto */
+}

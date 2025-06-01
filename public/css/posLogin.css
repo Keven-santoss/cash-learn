@@ -1,0 +1,478 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #26942c;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+  
+  footer {
+    position: static;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Garante que ocupe toda a largura da tela */
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+/* Define a largura da barra de rolagem */
+::-webkit-scrollbar {
+  width: 10px; /* Deixa a barra bem fina */
+}
+
+/* Estiliza o fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Cor de fundo */
+}
+
+/* Estiliza a alça de rolagem (scrollbar thumb) */
+::-webkit-scrollbar-thumb {
+  background: rgb(97, 231, 80); /* Cor verde */
+  border-radius: 10px; /* Bordas arredondadas */
+  height: 90%; /* Faz a alça ficar o mais longa possível */
+}
+
+/* Efeito ao passar o mouse sobre a alça */
+::-webkit-scrollbar-thumb:hover {
+  background: #006400; /* Verde mais escuro ao passar o mouse */
+}
+
+
+  @font-face {
+    font-family: "iconicFill";
+    src: url("iconic_fill.woff") format(woff);
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue; /* COR DE FUNDO DO HEADER  ---> ALTERAR DEPOIS */
+    padding: 10px;
+    box-shadow: 0 4px 1px gray;
+    margin: 3px;
+  }
+  
+  header button {
+    margin-right: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  header button:hover {
+    background-color: #008000;
+  }
+  
+  .cifrao {
+    width: 150px; /* Define a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  }
+  
+  /* Efeito ao passar o mouse */
+  .cifrao:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+  }
+  
+  /* Efeito ao clicar */
+  .cifrao:active {
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+  }
+  
+  /*Botões do topo da página abaixo:  ---------------------------------------*/
+  
+  .login-button {
+    top: 20px;
+    left: 20px;
+    background-color: #4caf50;
+    margin-right: auto;
+    background-image: linear-gradient(
+      to bottom,
+      #2ad130,
+      #0b6e10
+    ); /* NÂO APAGAR */
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  }
+  
+  .conta-button {
+    top: 20px;
+    left: 20px;
+    margin-right: auto;
+    background-color: #4caf50;
+    background-image: linear-gradient(to bottom, #2ad130, #0b6e10);
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  }
+  .aboutus-button {
+    top: 30px;
+    left: 30px;
+    margin-right: auto;
+    background-color: #4caf50;
+    background-image: linear-gradient(to bottom, #2ad130, #0b6e10);
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  }
+  .contato-button {
+    top: 40px;
+    left: 40px;
+    margin-right: auto;
+    background-color: #4caf50;
+    background-image: linear-gradient(to bottom, #2ad130, #0b6e10);
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  }
+  
+  /* SELECAO / CLIQUE nos botoes V */
+  .contato-button:hover {
+    background-color: #30a513;
+    background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+    border-color: #204569;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    inset: 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+    color: #fff;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+  }
+  
+  .contato-button:active {
+    background-color: #09772a;
+    background-image: none;
+    border-color: #1a3754;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+  }
+  
+  .aboutus-button:hover {
+    background-color: #30a513;
+    background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+    border-color: #204569;
+    box-shadow: inset 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+    color: #fff;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+  }
+  
+  .aboutus-button:active {
+    background-color: 09772a;
+    background-image: none;
+    border-color: #1a3754;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+  }
+  
+  .conta-button:hover {
+    background-color: #30a513;
+    background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+    border-color: #204569;
+    box-shadow: inset 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+    color: #fff;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+  }
+  
+  .conta-button:active {
+    background-color: #09772a;
+    background-image: none;
+    border-color: #1a3754;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+  }
+  
+  .login-button:hover {
+    background-color: 09772a;
+    background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+    border-color: #204569; /* NÂO APAGAR */
+    box-shadow: inset 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+    color: #fff;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+  }
+  
+  .login-button:active {
+    background-color: #09772a;
+    background-image: none; /* NÂO APAGAR */
+    border-color: #1a3754;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+  }
+  
+  main {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+  }
+  
+  .option-button {
+    top: 20px;
+    left: 20px;
+    margin: 8px;
+    background-color: #4caf50;
+    background-image: linear-gradient(to bottom, #2ad130, #0b6e10);
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    color: white;
+  }
+  
+  .option-button:hover {
+    background-color: #30a513;
+    background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+    border-color: #204569;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    inset: 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+    color: #fff;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+  }
+  
+  .option-button:active {
+    background-color: #09772a;
+    background-image: none;
+    border-color: #1a3754;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+  }
+  
+  .CentroCentrado {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .aulas-container {
+    position: static; /* Mantém a div fixa na tela */
+    width: 50%; /* Ajuste conforme necessário */
+  
+    text-align: center;
+    border-collapse: collapse; /* Remove espaçamentos entre as bordas das células */
+    background-color: #ffffff;
+    color: black;
+    border-radius: 16px;
+    margin: auto;
+    margin-top: 75px;
+    padding: 15px;
+    box-shadow: 3px 3px 8px 3px rgba(0, 0, 0, 0.8); /* Sombra forte e escura */
+  }
+  
+  .espaço {
+    padding-bottom: 200px; /* Ajuste conforme necessário */
+    flex: 1; /* Faz o conteúdo crescer e empurra o footer para o final */
+  }
+  
+  /* Estiliza o Wrapper */
+#categoriaWrapper {
+  display: none; /* Inicialmente oculto */
+  margin: auto;
+  margin-top: 10px;
+  padding: 3px;
+  border-radius: 8px;
+  background: #f5f5f5;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  text-align: center;
+  position: static; /* Fixa no centro da tela */
+}
+
+/* Remove o estilo padrão do Select */
+#categoriasDropdown {
+  appearance: none; /* Remove o estilo padrão do navegador */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 2px solid #4CAF50;
+  border-radius: 6px;
+  padding: 10px 15px;
+  font-size: 16px;
+  top-margin: 75px;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Ícone de seta customizada */
+#categoriaWrapper::after {
+  font-size: 14px;
+  position: static;
+  pointer-events: none;
+}
+
+/* Quando o Select é focado */
+#categoriasDropdown:focus {
+  border-color: #45a049;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Estiliza as opções */
+#categoriasDropdown option {
+  background: #fff;
+  color: #333;
+  padding: 10px;
+}
+
+/* Quando o usuário passa o mouse */
+#categoriasDropdown:hover {
+  background-color: #f0f0f0;
+}
+
+/* Estilização do painel */
+.Userpainel {
+  width: 80%;
+  max-width: 800px;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: static; /* Mantém a div fixa na tela */
+}
+
+/* Estilização da tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5px;
+}
+
+tr {
+  padding: 4px;
+  border: 1px black;
+  text-align: left;
+}
+
+td {
+  background: white;
+  color: black;
+  padding: 12px;
+  border: none;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Apenas borda inferior */
+  border-color: linen;
+}
+
+/* Link "Esqueci minha senha" */
+.senha-link {
+  color: #26942c;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+.senha-link:hover {
+  text-decoration: none;
+  text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.6);
+  transform: scale(1.1); /* Aumenta o tamanho da imagem */
+  filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+.senha-link:active {
+  transform: scale(0.95); /* Diminui o tamanho ao clicar */
+  filter: brightness(0.9); /* Reduz o brilho ao clicar */
+}
+
+
+.TituloTabela {
+
+  padding: 4px;
+  border: 1px black;
+  text-align: center;
+  border-top: 1px solid #ddd; /* Apenas borda superior */
+  border-bottom: 1px solid #ddd; /* Apenas borda inferior */
+  border-color: black;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.AlterarDados {
+
+  padding: 4px;
+  border: 1px black;
+  color: #008000;
+  text-align: center;
+  border-top: 1px solid #ddd; /* Apenas borda superior */
+  border-bottom: 1px solid #ddd; /* Apenas borda inferior */
+  border-color: black;
+}
+
+.AlterarDadosTabela{
+
+  font-size: x-large;
+  text-decoration: none;
+  font-weight: normal;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  color: #008000;
+}
+
+.AlterarDadosTabela:hover {
+  text-decoration: none;
+  text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.6);
+  transform: scale(1.1); /* Aumenta o tamanho da imagem */
+  text-decoration: none;
+  filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+.AlterarDadosTabela:active {
+  transform: scale(0.95); /* Diminui o tamanho ao clicar */
+  filter: brightness(0.9); /* Reduz o brilho ao clicar */
+  text-decoration: none;
+}
+
+h2 {
+
+  color: white;
+  font-size: 45px;
+  margin-top: 75px;
+  font-shadow: 2px, 2px, 4px black;
+  text-align: center;
+}

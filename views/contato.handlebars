@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/contato.css">
+        <link rel="icon" href="../imagens/ICONE.png" type="image/x-icon">
+        <link rel="shortcut icon" href="../imagens/ICONE.png" type="image/x-icon">
+        <title>CASH LEARN | Contato</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    </head>
+    <header>
+        <div class="header">
+            <a href="/"><button class="login-button">PRINCIPAL</button> </a>
+            <a href="/conta"><button class="login-button"> CONTA </button> </a>
+            <a href="/sobre"> <button class="login-button">SOBRE NÓS</button> </a>
+            <a href="/contato"> <button class="login-button">CONTATO</button> </a>
+            <a href="/posLogin"> <button class="login-button"> PAINEL DO USUÁRIO </button> </a>
+        </div>
+        <a href="/posLogin"><img src="../imagens/CIFRAO.png" alt="" class="cifrao"></a> 
+    </header>
+    <body>
+        <div class="titulozin">
+            <h2>Entre em Contato Conosco</h2> <br> <br> <br>
+        </div>
+        <div class="main-content">
+            <div class="left-content">
+                <p>Vamos respondê-lo o mais rápido possível!</p>
+                <p><i class="bi bi-send-fill"></i> Diga-nos o que está pensando...</p>  <i class="bi bi-arrow-right"></i>
+            </div>
+            
+
+            <div class="form-container">
+                <form action="/enviarMensagem" method="post">
+                    <label for="name">Nome:</label><br>
+                    <input type="text" id="name" placeholder="Escreva seu nome" name="name" required><br><br>
+
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" id="email" placeholder="Escreva seu endereço de e-mail" name="email" required><br><br>
+    
+                    <label for="message">Mensagem:</label><br>
+                   <textarea id="message" name="message" placeholder="Escreva sua mensagem..." rows="5" required></textarea><br><br>
+    
+                   <center>
+    <button type="submit" class="submit-button">Enviar</button>
+</center>
+
+                </form>
+            </div>
+
+            <div class="right-content">
+                <p>Ou envie-nos um email para o endereço: <br> <i class="bi bi-envelope-fill"></i> <strong>Ouvidoria@CashLearn.com</strong></p>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <i class="bi bi-c-circle"></i> 2025 Cash Learn, Educação Financeira. Todos os direitos reservados.
+    </footer>
+</html>

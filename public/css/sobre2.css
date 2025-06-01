@@ -1,0 +1,360 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #26942c;
+    overflow: hidden; /* Remove a barra de rolagem */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+
+}
+
+/* Define a largura da barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px; /* Deixa a barra bem fina */
+  }
+  
+  /* Estiliza o fundo da barra de rolagem */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Cor de fundo */
+  }
+  
+  /* Estiliza a alça de rolagem (scrollbar thumb) */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(97, 231, 80); /* Cor verde */
+    border-radius: 10px; /* Bordas arredondadas */
+    height: 90%; /* Faz a alça ficar o mais longa possível */
+  }
+  
+  /* Efeito ao passar o mouse sobre a alça */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #006400; /* Verde mais escuro ao passar o mouse */
+  }
+
+@font-face {
+
+    font-family: 'iconicFill';
+    src: url('iconic_fill.woff') format(woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue; /* COR DE FUNDO DO HEADER  ---> ALTERAR DEPOIS */
+    padding: 10px;
+    box-shadow: 0 4px 1px gray;
+    margin: 3px;
+}
+
+header button {
+    margin-right: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #008000
+}
+
+.cifrao {
+    width: 150px; /* Define a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+/* Efeito ao passar o mouse */
+.cifrao:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+/* Efeito ao clicar */
+.cifrao:active {
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+}
+
+/*Botões do topo da página abaixo:  ---------------------------------------*/ 
+
+.login-button {
+    top: 20px;
+    left: 20px;
+    background-color: #4CAF50;
+    margin-right: auto;
+    background-image: linear-gradient(to bottom, #2ad130, #0b6e10);         /* NÂO APAGAR */
+    border: 1px solid #AAA;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+.conta-button {
+    top: 20px;
+    left: 20px;
+    margin-right: auto;
+    background-color: #4CAF50;
+    background-image: linear-gradient(to bottom, #2ad130, #0b6e10);
+    border: 1px solid #AAA;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+.aboutus-button {
+    top: 30px;
+    left: 30px;
+    margin-right: auto;
+    background-color: #4CAF50;
+    background-image: linear-gradient(to bottom, #2ad130, #0b6e10);
+    border: 1px solid #AAA;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+.contato-button {
+    top: 40px;
+    left: 40px;
+    margin-right: auto;
+    background-color: #4CAF50;
+    background-image: linear-gradient(to bottom, #2ad130, #0b6e10);
+    border: 1px solid #AAA;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+  /* SELECAO / CLIQUE nos botoes V */
+.contato-button:hover {
+
+    background-color: #30a513;
+    background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+    border-color: #204569;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    inset: 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+    color: #FFF;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+.contato-button:active {
+
+    background-color: #09772a;
+    background-image: none;
+    border-color: #1A3754;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+}
+
+.aboutus-button:hover {
+
+    background-color: #30a513;
+    background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+    border-color: #204569;
+    box-shadow: 
+        inset 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+    color: #FFF;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+.aboutus-button:active {
+
+    background-color: 09772a;
+    background-image: none;
+    border-color: #1A3754;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);    
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+}
+
+.conta-button:hover {
+
+    background-color: #30a513;
+    background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+    border-color: #204569;
+    box-shadow: 
+        inset 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+    color: #FFF;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+.conta-button:active {
+
+    background-color: #09772a;
+    background-image: none;
+    border-color: #1A3754;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+}
+
+.login-button:hover {
+
+    background-color: 09772a;
+    background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+    border-color: #204569;                                              /* NÂO APAGAR */
+    box-shadow: 
+        inset 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+    color: #FFF;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+.login-button:active {
+
+    background-color: #09772a;
+    background-image: none;                                                /* NÂO APAGAR */
+    border-color: #1A3754;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+}
+
+/* Botões do topo da página acima -----------------------------------------*/ 
+
+.caixote {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.tituloPrincipal {
+    text-align: center;
+    color: #FFF;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.textin {
+    text-align: center;
+    color: #FFF;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.LOGOMARCA {
+    width: 50%;
+    text-align: left; /* Alinha a imagem à esquerda */
+}
+
+.LOGOMARCA img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: 0;
+    top: 30%; /* Coloca o elemento no meio da página verticalmente */
+    transform: translateY(25%); /* Centraliza verticalmente */
+    margin: 80px;
+    box-shadow: 6px 6px 10px 5px rgba(0, 0, 0, 0.8); /* Sombra forte e escura */
+}
+
+.texto-container {
+    width: 50%;
+    text-align: left; /* Alinha o texto à esquerda */
+    top: 35%; /* Coloca o elemento no meio da página verticalmente */
+    transform: translateY(40%); /* Centraliza verticalmente */
+    display: inline-block; /* Para permitir o preenchimento e centralização */
+    margin: 20px;
+}
+
+.saiba {
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão à direita */
+    margin-top: 55px; /* Ajusta o espaço entre o texto e o botão */
+    margin-right: 400px; /* Ajusta a distância da borda direita */
+}
+
+.knowmore {
+    background-image: linear-gradient(to bottom, #2ad130, #0b6e10);
+    color: white;
+    font-family:'Times New Roman', Times, serif ;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    box-shadow: inset 3px 4px 8px rgba(0, 0, 0, 0.15);
+    padding: 10px 20px;
+    font-size: 22px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+.knowmore:hover {
+    background-color: #30a513;
+    background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+    border-color: #204569;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    inset: 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+    color: #FFF;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+.knowmore:active {
+    background-color: #09772a;
+    background-image: none;
+    border-color: #1A3754;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+}
+    
+.termos {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.termos label {
+    cursor: pointer;
+}
+
+.termos input {
+    margin-right: 5px;
+}
+
+.termos .aviso {
+    display: none;
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+input:invalid + label + .aviso {
+    display: block;
+}

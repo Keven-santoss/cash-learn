@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style2.css">
+    <link rel="icon" href="/imagens/ICONE.png" type="image/x-icon"> <!-- Altere o caminho para o seu favicon -->
+    <link rel="shortcut icon" href="/imagens/ICONE.png" type="image/x-icon"> <!-- Para compatibilidade -->
+    <title>CASH LEARN | Regristre-se </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"                                
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" 
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/scrollEfeito.js"></script>
+</head>
+<header>
+    <div class="header">
+        <a href="/"><button class="login-button">PRINCIPAL</button> </a>
+        <a href="/conta"><button class="login-button"> CONTA </button> </a>
+        <a href="/sobre"> <button class="login-button">SOBRE NÓS</button> </a>
+        <a href="/contato"> <button class="login-button">CONTATO</button> </a>
+        <a href="/posLogin"> <button class="login-button"> PAINEL DO USUÁRIO </button> </a>
+    </div>
+    <a href="/posLogin"><img src="/imagens/CIFRAO.png" alt="" class="cifrao"></a> 
+</header>
+
+<body> 
+    <section class="central">
+    <div class="panel">
+        <h2>CRIAR UMA NOVA CONTA</h2>
+        <form id="senhaform" action="/conta" method="post">
+            <div class="input-group">
+                <i class="bi bi-person-fill"></i>
+                <label for="nome">NOME:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            </div>
+            <div class="input-group">
+                <i class="bi bi-envelope-fill"></i>
+                <label for="email">EMAIL:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                <div id="mensagemEmail"></div>
+            </div>
+            <div class="input-group">
+                <i class="bi bi-key-fill"></i>
+                <label for="senha">SENHA:</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+            </div>
+            <p>Já possui cadastro? <a href="/login">Faça login...</a></p> <br>
+            <div class="termos">
+                <input type="checkbox" id="aceitarTermos" required>
+                <label for="aceitarTermos"> Eu concordo com os <a href="/termospolitica">Termos de uso</a> e a <a href="/termospolitica">Política de privacidade</a>.</label>
+            </div>
+            <br><br>
+            <h2>Qual sua principal área de interesse?</h2>
+            <div class="formulario">
+                <label>
+                    <input type="radio" name="categorias" value="3">  Tesouro direto
+                </label>
+                <label>
+                    <input type="radio" name="categorias" value="2">  Bolsa de valores
+                </label>
+                <label>
+                    <input type="radio" name="categorias" value="4">  Poupança
+                </label>
+                <label>
+                    <input type="radio" name="categorias" value="1">  Como sair das dívidas
+                </label>
+                <label>
+                    <input type="radio" name="categorias" value="5">  CDB
+                </label>
+            </div>
+            <input type="submit" value="Cadastrar">
+        </form>
+    </div>
+</section>
+    <script>
+       /* $("#senhaform").submit(function(event){
+         var nome = $("#nome").val();
+         var email = $("#email").val();
+         var senha = $("#senha").val();
+         
+        $.post("http://localhost:3000/conta", { nome: nome, email: email, senha: senha }, function(data) {
+         alert("Sucesso!");
+
+        })
+        });*/
+        function queryObj() {
+            var result = {}, keyValuePairs = location.search.slice(1).split("&");
+            keyValuePairs.forEach(function(keyValuePair) {
+                keyValuePair = keyValuePair.split('=');
+                result[decodeURIComponent(keyValuePair[0])] = decodeURIComponent(keyValuePair[1]) || '';
+            });
+            return result;
+        }
+        let mensagem = queryObj();
+
+        $("#mensagemEmail").html(mensagem?.mensagem)
+   
+       </script>
+    
+    <footer>
+        <i class="bi bi-c-circle"></i> 2025 Cash Learn, Educação Financeira. Todos os direitos reservados.
+    </footer> 
+</body>
+</html>

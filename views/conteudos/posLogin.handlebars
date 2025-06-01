@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="/imagens/ICONE.png" type="image/x-icon">
+      <link rel="stylesheet" href="/css/posLogin.css">
+      <link rel="shortcut icon" href="/imagens/ICONE.png" type="image/x-icon">
+      <title>CASH LEARN | Pós-Login </title>
+   </head>
+   <body>
+      <header>
+         <div class="header">
+            <a href="/"><button class="login-button">PRINCIPAL</button> </a>
+            <a href="/conta"><button class="login-button"> CONTA </button> </a>
+            <a href="/sobre"> <button class="login-button">SOBRE NÓS</button> </a>
+            <a href="/contato"> <button class="login-button">CONTATO</button> </a>
+            <a href="/logout"> <button class="login-button"> SAIR </button> </a>
+         </div>
+         <a href="/"><img src="/imagens/CIFRAO.png" alt="" class="cifrao"></a> 
+      </header>
+      <div class="CentroCentrado"> 
+        <main class="post-login-content">
+            <h1>Bem-vindo(a), {{usuario}}!</h1>
+            <p>Aqui você pode acessar suas informações, gerenciar sua conta e explorar nossos conteúdos financeiros exclusivos.</p>
+            <!-- Botões de opções do usuário -->
+            <div class="user-options">
+                <a href="/todosConteudos"><button class="option-button">Acessar Todos Conteúdos</button></a>
+            </div>
+        </main>
+        <!-- Botão para trocar de categoria -->
+        <button class="option-button" id="trocarCategoriaBtn"> Trocar de Categoria </button>
+        <!-- Wrapper para o select que será exibido ao clicar no botão -->
+        <div id="categoriaWrapper">
+            <select id="categoriasDropdown">
+                <option value="">Selecione uma categoria</option>
+            </select>
+        </div> 
+        <h2>Suas Aulas:</h2>
+        <div class="aulas-container" id="aulasContainer">
+            <!-- Iteração das aulas disponíveis -->
+            {{#each aulas}}
+            <div class="aula-card">
+                <h3>{{this.nome}}</h3>
+                <iframe width="560" height="315" src="{{formatYouTubeEmbedUrl link}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Categoria: {{this.categoria_nome}}</p>
+            </div>
+            {{/each}}
+        </div>
+        <div class="Userpainel">
+            <table>
+                <tr>
+                <td colspan="2" class="TituloTabela">
+                    Suas Informações de Cadastro
+                </td>
+                </tr>
+                <tr>
+                <td> Nome de Usuário: </td>
+                <td> {{usuario}} </td>
+                </tr>
+                <tr>
+                <td>E-mail:</td>
+                <td> {{email}} </td>
+                </tr>
+                <tr>
+                <td> Esqueceu sua Senha? </td>
+                <td><a href="/contato" class="senha-link">Recuperar Senha</a></td>
+                </tr>
+                <tr>
+                <td colspan="2" class="AlterarDados">
+                    <a href="/contato" class="AlterarDadosTabela"> -Alterar Dados Cadastrados </a>
+                </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+      <!-----------------------------------------------JAVACRIPT------------------------------------------------------>    
+      <script>
+  // 1) Ao carregar a página, garanta que o wrapper comece escondido no CSS:
+  //    #categoriaWrapper { display: none; }
+
+  document.getElementById("trocarCategoriaBtn")
+    .addEventListener("click", function () {
+      // 2) Exibe o <div> que contém o <select>
+      const wrapper = document.getElementById("categoriaWrapper");
+      wrapper.style.display = "block";
+
+      // 3) Se ainda não tiver sido carregado, busca as categorias
+      const dropdown = document.getElementById("categoriasDropdown");
+      if (dropdown.options.length > 1) {
+        return; // já pré-carregado, evita nova requisição
+      }
+
+      fetch("/todasCategorias")
+        .then(response => response.json())
+        .then(data => {
+          data.categorias.forEach(categoria => {
+            const option = document.createElement("option");
+            option.value = categoria.id;
+            option.text  = categoria.nome;
+            dropdown.appendChild(option);
+          });
+        })
+        .catch(error => console.error("Erro ao carregar categorias:", error));
+    });
+
+  // 4) Quando mudar de categoria no <select>, carrega as aulas
+  document.getElementById("categoriasDropdown")
+    .addEventListener("change", function () {
+      const categoriaId = this.value;
+      if (!categoriaId) return;
+
+      fetch(`/aulasPorCategoria/${categoriaId}`)
+        .then(response => response.json())
+        .then(data => {
+          const container = document.getElementById("aulasContainer");
+          container.innerHTML = ""; // limpa tudo
+
+          data.aulas.forEach(aula => {
+            // converte o link para embed
+            let videoId = null;
+            try {
+              const urlObj = new URL(aula.link);
+              if (urlObj.hostname.includes("youtu.be")) {
+                videoId = urlObj.pathname.substring(1);
+              } else if (urlObj.hostname.includes("youtube.com")) {
+                videoId = urlObj.searchParams.get("v");
+              }
+            } catch {
+              videoId = null;
+            }
+            const videoSrc = videoId
+              ? `https://www.youtube.com/embed/${videoId}`
+              : aula.link;
+
+            // monta o card da aula
+            container.innerHTML += `
+              <div class="aula-card">
+                <h3>${aula.nome}</h3>
+                <iframe width="560" height="315"
+                  src="${videoSrc}"
+                  frameborder="0" allowfullscreen>
+                </iframe>
+                <p>Duração: ${aula.duração}</p>
+                <p>Categoria: ${aula.categoria_nome}</p>
+              </div>
+            `;
+          });
+        })
+        .catch(error => console.error("Erro ao carregar aulas:", error));
+    });
+</script>
+   </body>
+   <footer>
+      <i class="bi bi-c-circle"></i> 2025 Cash Learn, Educação Financeira. Todos os direitos reservados.
+   </footer>
+</html>

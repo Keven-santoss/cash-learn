@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/imagens/ICONE.png" type="image/x-icon"> <!-- Altere o caminho para o seu favicon -->
+    <link rel="shortcut icon" href="/imagens/ICONE.png" type="image/x-icon"> <!-- Para compatibilidade -->
+    <title>CASH LEARN | Termos e Política </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"                                
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" 
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/scrollEfeito.js"></script>
+</head>
+<header>
+    <div class="header">
+        <a href="/"><button class="login-button">PRINCIPAL</button> </a>
+        <a href="/conta"><button class="login-button"> CONTA </button> </a>
+        <a href="/sobre"> <button class="login-button">SOBRE NÓS</button> </a>
+        <a href="/contato"> <button class="login-button">CONTATO</button> </a>
+        <a href="/posLogin"> <button class="login-button"> PAINEL DO USUÁRIO </button> </a>
+    </div>
+    <a href="/posLogin"><img src="/imagens/CIFRAO.png" alt="" class="cifrao"></a> 
+</header>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #26942c;
+}
+
+            footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                background-color: #ffffff;
+                text-align: center;
+                padding: 10px;
+                font-weight: bold;
+
+            }
+
+            @font-face {
+
+                font-family: 'iconicFill';
+                src: url('iconic_fill.woff') format(woff);
+                font-weight: normal;
+                font-style: normal;
+            }
+                        
+                        /* Define a largura da barra de rolagem */
+            ::-webkit-scrollbar {
+            width: 10px; /* Deixa a barra bem fina */
+            }
+
+            /* Estiliza o fundo da barra de rolagem */
+            ::-webkit-scrollbar-track {
+            background: #f1f1f1; /* Cor de fundo */
+            }
+
+            /* Estiliza a alça de rolagem (scrollbar thumb) */
+            ::-webkit-scrollbar-thumb {
+            background: rgb(97, 231, 80); /* Cor verde */
+            border-radius: 10px; /* Bordas arredondadas */
+            height: 90%; /* Faz a alça ficar o mais longa possível */
+            }
+
+            /* Efeito ao passar o mouse sobre a alça */
+            ::-webkit-scrollbar-thumb:hover {
+            background: #006400; /* Verde mais escuro ao passar o mouse */
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: aliceblue; /* COR DE FUNDO DO HEADER  ---> ALTERAR DEPOIS */
+                padding: 10px;
+                box-shadow: 0 4px 1px gray;
+                margin: 3px;
+            }
+
+            header button {
+                margin-right: 10px;
+                padding: 10px;
+                border: none;
+                background-color: #4CAF50;
+                color: white;
+                cursor: pointer;
+            }
+
+            header button:hover {
+                background-color: #008000
+            }
+
+            .cifrao {
+                width: 150px; /* Define a largura da imagem */
+                height: auto; /* Mantém a proporção da imagem */
+                transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+                cursor: pointer; /* Muda o cursor para indicar que é clicável */
+            }
+
+            /* Efeito ao passar o mouse */
+            .cifrao:hover {
+                transform: scale(1.1); /* Aumenta o tamanho da imagem */
+                filter: brightness(1.2); /* Aumenta o brilho */
+            }
+
+            /* Efeito ao clicar */
+            .cifrao:active {
+                transform: scale(0.95); /* Diminui o tamanho ao clicar */
+                filter: brightness(0.9); /* Reduz o brilho ao clicar */
+            }
+
+            /*Botões do topo da página abaixo:  ---------------------------------------*/ 
+
+            .login-button {
+                top: 20px;
+                left: 20px;
+                background-color: #4CAF50;
+                margin-right: auto;
+                background-image: linear-gradient(to bottom, #2ad130, #0b6e10);         /* NÂO APAGAR */
+                border: 1px solid #AAA;
+                border-radius: 3px;
+                font-size: 0.8em;
+                font-weight: bold;
+                padding: 5px 10px;
+                transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+                cursor: pointer; /* Muda o cursor para indicar que é clicável */
+            }
+
+            .conta-button {
+                top: 20px;
+                left: 20px;
+                margin-right: auto;
+                background-color: #4CAF50;
+                background-image: linear-gradient(to bottom, #2ad130, #0b6e10);
+                border: 1px solid #AAA;
+                border-radius: 3px;
+                font-size: 0.8em;
+                font-weight: bold;
+                padding: 5px 10px;
+                transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+                cursor: pointer; /* Muda o cursor para indicar que é clicável */
+            }
+            .aboutus-button {
+                top: 30px;
+                left: 30px;
+                margin-right: auto;
+                background-color: #4CAF50;
+                background-image: linear-gradient(to bottom, #2ad130, #0b6e10);
+                border: 1px solid #AAA;
+                border-radius: 3px;
+                font-size: 0.8em;
+                font-weight: bold;
+                padding: 5px 10px;
+                transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+                cursor: pointer; /* Muda o cursor para indicar que é clicável */
+            }
+            .contato-button {
+                top: 40px;
+                left: 40px;
+                margin-right: auto;
+                background-color: #4CAF50;
+                background-image: linear-gradient(to bottom, #2ad130, #0b6e10);
+                border: 1px solid #AAA;
+                border-radius: 3px;
+                font-size: 0.8em;
+                font-weight: bold;
+                padding: 5px 10px;
+                transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+                cursor: pointer; /* Muda o cursor para indicar que é clicável */
+            }
+
+            /* SELECAO / CLIQUE nos botoes V */
+            .contato-button:hover {
+
+                background-color: #30a513;
+                background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+                border-color: #204569;
+                box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+                inset: 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+                color: #FFF;
+                text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+                transform: scale(1.1); /* Aumenta o tamanho da imagem */
+                filter: brightness(1.2); /* Aumenta o brilho */
+            }
+
+            .contato-button:active {
+
+                background-color: #09772a;
+                background-image: none;
+                border-color: #1A3754;
+                box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+                transform: scale(0.95); /* Diminui o tamanho ao clicar */
+                filter: brightness(0.9); /* Reduz o brilho ao clicar */
+            }
+
+            .aboutus-button:hover {
+
+                background-color: #30a513;
+                background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+                border-color: #204569;
+                box-shadow: 
+                    inset 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+                color: #FFF;
+                text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+                transform: scale(1.1); /* Aumenta o tamanho da imagem */
+                filter: brightness(1.2); /* Aumenta o brilho */
+            }
+
+            .aboutus-button:active {
+
+                background-color: 09772a;
+                background-image: none;
+                border-color: #1A3754;
+                box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);    
+                transform: scale(0.95); /* Diminui o tamanho ao clicar */
+                filter: brightness(0.9); /* Reduz o brilho ao clicar */
+            }
+
+            .conta-button:hover {
+
+                background-color: #30a513;
+                background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+                border-color: #204569;
+                box-shadow: 
+                    inset 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+                color: #FFF;
+                text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+                transform: scale(1.1); /* Aumenta o tamanho da imagem */
+                filter: brightness(1.2); /* Aumenta o brilho */
+            }
+
+            .conta-button:active {
+
+                background-color: #09772a;
+                background-image: none;
+                border-color: #1A3754;
+                box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+                transform: scale(0.95); /* Diminui o tamanho ao clicar */
+                filter: brightness(0.9); /* Reduz o brilho ao clicar */
+            }
+
+            .login-button:hover {
+
+                background-color: 09772a;
+                background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+                border-color: #204569;                                              /* NÂO APAGAR */
+                box-shadow: 
+                    inset 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+                color: #FFF;
+                text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+                transform: scale(1.1); /* Aumenta o tamanho da imagem */
+                filter: brightness(1.2); /* Aumenta o brilho */
+            }
+
+            .login-button:active {
+
+                background-color: #09772a;
+                background-image: none;                                                /* NÂO APAGAR */
+                border-color: #1A3754;
+                box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+                transform: scale(0.95); /* Diminui o tamanho ao clicar */
+                filter: brightness(0.9); /* Reduz o brilho ao clicar */
+            }
+
+            /* Botões do topo da página acima -----------------------------------------*/ 
+
+            .knowmore {
+                background-image: linear-gradient(to bottom, #2ad130, #0b6e10);
+                color: white;
+                font-family:'Times New Roman', Times, serif ;
+                text-shadow: 1px 1px 2px rgb(0, 0, 0);
+                box-shadow: inset 3px 4px 8px rgba(0, 0, 0, 0.15);
+                padding: 10px 20px;
+                font-size: 22px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+                cursor: pointer; /* Muda o cursor para indicar que é clicável */
+            }
+
+        .knowmore:hover {
+            background-color: #30a513;
+            background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+            border-color: #204569;
+            box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+            inset: 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+            color: #FFF;
+            text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+            transform: scale(1.1); /* Aumenta o tamanho da imagem */
+            filter: brightness(1.2); /* Aumenta o brilho */
+        }
+
+        .knowmore:active {
+            background-color: #09772a;
+            background-image: none;
+            border-color: #1A3754;
+            box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+            transform: scale(0.95); /* Diminui o tamanho ao clicar */
+            filter: brightness(0.9); /* Reduz o brilho ao clicar */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #09772a;
+            font-size: xx-large;
+            text-align: center;
+        }
+
+        h2 {
+            color: #09772a;
+        }
+
+        a {
+            color: #09772a;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Termos de Uso</h1> 
+        <p>Bem-vindo ao <i class="bi bi-c-circle"></i> <strong>Cash Learn</strong>. Ao utilizar nossos serviços, você concorda com os termos abaixo:</p>
+        
+        <h2>1. Uso dos Serviços</h2>
+        <p>Nosso site tem como objetivo fornecer educação financeira de forma acessível. O uso indevido da plataforma pode resultar na suspensão ou exclusão da conta.</p>
+        
+        <h2>2. Cadastro e Conta</h2>
+        <p>Para acessar determinados recursos, você deve fornecer informações verdadeiras e atualizadas, incluindo nome, e-mail e senha. O usuário é responsável por manter sua conta segura.</p>
+        
+        <h2>3. Propriedade Intelectual</h2>
+        <p>Todo o conteúdo disponibilizado é protegido por direitos autorais e não pode ser copiado sem autorização prévia.</p> <br><br>   
+        
+        <h1>Política de Privacidade</h1> <br> 
+        <p>O <strong>Cash Learn</strong> se compromete a proteger seus dados pessoais em conformidade com a <strong>Lei Geral de Proteção de Dados (LGPD – Lei nº 13.709/2018)</strong>.</p>
+        
+        <h2>1. Coleta de Dados</h2>
+        <p>Coletamos informações como nome, e-mail e senha para garantir o funcionamento adequado da plataforma. Esses dados são utilizados apenas para criar e manter sua conta.</p>
+        
+        <h2>2. Armazenamento e Segurança</h2>
+        <p>Seus dados são armazenados de forma segura, utilizando criptografia e medidas de proteção contra acessos não autorizados.</p>
+        
+        <h2>3. Compartilhamento de Informações</h2>
+        <p>Não compartilhamos seus dados com terceiros, exceto quando exigido por lei.</p>
+        
+        <h2>4. Direitos do Usuário</h2>
+        <p>Você pode solicitar a exclusão ou alteração de seus dados a qualquer momento, conforme previsto na LGPD.</p>
+        
+        <h2>5. Contato</h2>
+        <p>Em caso de dúvidas, problemas, relatar bugs, ou qualquer situação que necessite nos contatar, entre em contato conosco pela aba "Contato" no site, ou nos envie um e-mail para: "Ouvidoria@CashLearn.com"</a>.</p>
+
+        <center> <a href="/conta"> <button class="knowmore"> VOLTAR  </button> </a> </center>
+
+    </div>
+    <footer class="footer">
+        <i class="bi bi-c-circle"></i> 2025 Cash Learn, Educação Financeira. Todos os direitos reservados.
+    </footer>
+</body>
+</html>

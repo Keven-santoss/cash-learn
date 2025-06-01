@@ -1,0 +1,360 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #26942c;
+    overflow: hidden; /* Remove a barra de rolagem */
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+
+}
+
+@font-face {
+
+    font-family: 'iconicFill';
+    src: url('iconic_fill.woff') format(woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right,  #a9e4a9, rgb(236, 240, 185), aliceblue);
+    padding: 10px;
+    box-shadow: 0 4px 1px gray;
+    margin: 3px;
+}
+
+header button {
+    margin-right: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #008000
+}
+
+.cifrao {
+    width: 150px; /* Define a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+/* Efeito ao passar o mouse */
+.cifrao:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+/* Efeito ao clicar */
+.cifrao:active {
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+}
+
+/*Botões do topo da página abaixo:  ---------------------------------------*/ 
+
+.login-button {
+    top: 20px;
+    left: 20px;
+    background-color: #4CAF50;
+    margin-right: auto;
+    background-image: linear-gradient(to bottom, #2ad130, #0b6e10);         /* NÂO APAGAR */
+    border: 1px solid #AAA;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+.conta-button {
+    top: 20px;
+    left: 20px;
+    margin-right: auto;
+    background-color: #4CAF50;
+    background-image: linear-gradient(to bottom, #2ad130, #0b6e10);
+    border: 1px solid #AAA;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+.aboutus-button {
+    top: 30px;
+    left: 30px;
+    margin-right: auto;
+    background-color: #4CAF50;
+    background-image: linear-gradient(to bottom, #2ad130, #0b6e10);
+    border: 1px solid #AAA;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+.contato-button {
+    top: 40px;
+    left: 40px;
+    margin-right: auto;
+    background-color: #4CAF50;
+    background-image: linear-gradient(to bottom, #2ad130, #0b6e10);
+    border: 1px solid #AAA;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+  /* SELECAO / CLIQUE nos botoes V */
+.contato-button:hover {
+
+    background-color: #30a513;
+    background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+    border-color: #204569;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    inset: 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+    color: #FFF;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+.contato-button:active {
+
+    background-color: #09772a;
+    background-image: none;
+    border-color: #1A3754;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+}
+
+.aboutus-button:hover {
+
+    background-color: #30a513;
+    background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+    border-color: #204569;
+    box-shadow: 
+        inset 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+    color: #FFF;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+.aboutus-button:active {
+
+    background-color: 09772a;
+    background-image: none;
+    border-color: #1A3754;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);    
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+}
+
+.conta-button:hover {
+
+    background-color: #30a513;
+    background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+    border-color: #204569;
+    box-shadow: 
+        inset 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+    color: #FFF;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+.conta-button:active {
+
+    background-color: #09772a;
+    background-image: none;
+    border-color: #1A3754;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+}
+
+.login-button:hover {
+
+    background-color: 09772a;
+    background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+    border-color: #204569;                                              /* NÂO APAGAR */
+    box-shadow: 
+        inset 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+    color: #FFF;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+.login-button:active {
+
+    background-color: #09772a;
+    background-image: none;                                                /* NÂO APAGAR */
+    border-color: #1A3754;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+}
+
+/* Botões do topo da página acima -----------------------------------------*/ 
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin-bottom: 10px; /* Adiciona um espaço acima do conteúdo */
+}
+
+.main-content button {
+    padding: 20px;
+    margin: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-container {
+    background-color: #308a19;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 30px;
+    margin: 50px;
+    max-width: 600px;
+    margin: auto;
+}
+
+input {
+
+    border-radius: 16px;
+
+}
+    /*        ---------------------PARTE DA ABA DE LOGIN / REGISTRO  V -------------------------------                 */
+
+    /* Conteúdo principal */
+    .main-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start; /* Alinha os itens na parte superior */
+        height: auto; /* Altere para auto se o conteúdo for maior */
+        padding: 20px;
+        margin-bottom: 10px; /* Adiciona um espaço abaixo do conteúdo */
+    }
+    
+    .left-content, .right-content {
+        flex: 1; /* Permite que cada coluna ocupe a mesma largura */
+        padding: 10px;
+        background: linear-gradient(to right,  #056305, rgba(18, 185, 26, 0.596), rgb(154, 199, 82));
+        color: white;
+        border-radius: 5px;
+        margin: 0 10px; /* Adiciona um espaçamento entre as colunas */
+        text-align: center;
+        font-size: 22px;
+        margin: 120px;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra leve para dar profundidade */
+    }
+    
+    .form-container {
+        background-color: whitesmoke;
+        color: black;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: 100%; /* Muda a largura para ocupar o espaço disponível */
+        max-width: 600px; /* Limite de largura máxima */
+        margin: auto; /* Centraliza o formulário */
+        font-size: 22px;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra leve para dar profundidade */
+    }
+
+input, textarea {
+    border-radius: 16px;
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    margin-top: 5px; /* Espaçamento acima */
+    border: none; /* Remove a borda padrão */
+}
+
+textarea {
+    resize: none; /* Impede o redimensionamento do textarea */
+}
+
+.submit-button {
+  
+    margin: auto;
+    background-color: #4CAF50;
+    background-image: linear-gradient(to bottom, #2ad130, #0b6e10);
+    border: 1px solid #AAA;
+    border-radius: 3px;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transição suave para os efeitos */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    text-align: center;
+    width: 40%;
+}
+
+.submit-button:hover {
+    
+    background-color: #30a513;
+    background-image: linear-gradient(to bottom, #2ecf06, #045f08);
+    border-color: #204569;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    inset: 0 1px 0 rgba(9, 255, 1, 0.938), 0 0 3px #37b34c;
+    color: #FFF;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.6);
+    transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+.submit-button:active {
+
+    background-color: #09772a;
+    background-image: none;
+    border-color: #1A3754;
+    box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.15);
+    transform: scale(0.95); /* Diminui o tamanho ao clicar */
+    filter: brightness(0.9); /* Reduz o brilho ao clicar */
+}
+
+h2 {
+
+    font-size: 40px;
+}
+
+.titulozin {
+
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0); /* Sombra */
+}
